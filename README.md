@@ -2,4 +2,4 @@
 
 
 
-Wallpaper Selling Website Example made in React
+Wallpaper Website Example made in React
