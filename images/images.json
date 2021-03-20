@@ -1,0 +1,117 @@
+[
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "1",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "2",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "3",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "4",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "5",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "6",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "7",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "8",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "9",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "10",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "11",
+        "isFavorite": false
+    },
+    {
+        "url": "https://picsum.photos/500/500",
+        "id": "12",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic13.jpg?raw=true",
+        "id": "13",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic14.jpg?raw=true",
+        "id": "14",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic15.jpg?raw=true",
+        "id": "15",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic16.jpg?raw=true",
+        "id": "16",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic17.jpg?raw=true",
+        "id": "17",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic18.jpg?raw=true",
+        "id": "18",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic19.jpg?raw=true",
+        "id": "19",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic20.jpg?raw=true",
+        "id": "20",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic21.jpg?raw=true",
+        "id": "21",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic22.jpg?raw=true",
+        "id": "22",
+        "isFavorite": false
+    },
+    {
+        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic23.jpg?raw=true",
+        "id": "23",
+        "isFavorite": false
+    }
+]
