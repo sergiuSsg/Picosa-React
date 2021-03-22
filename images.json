@@ -1,51 +1,51 @@
 [
     {
-        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic1.jpg?raw=true",
+        "url": "https://raw.githubusercontent.com/sergiuSsg/Picosa-React/main/photos/pic1.jpg",
         "id": "1",
         "isFavorite": false
     },
     {
-        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic2.jpg?raw=true",
+        "url": "https://raw.githubusercontent.com/sergiuSsg/Picosa-React/main/photos/pic2.jpg",
         "id": "2",
         "isFavorite": false
     },
     {
-        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic3.jpg?raw=true",
+        "url": "https://raw.githubusercontent.com/sergiuSsg/Picosa-React/main/photos/pic3.jpg",
         "id": "3",
         "isFavorite": false
     },
     {
-        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic4.jpg?raw=true",
+        "url": "https://raw.githubusercontent.com/sergiuSsg/Picosa-React/main/photos/pic4.jpg",
         "id": "4",
         "isFavorite": false
     },
     {
-        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic5.jpg?raw=true",
+        "url": "https://raw.githubusercontent.com/sergiuSsg/Picosa-React/main/photos/pic5.jpg",
         "id": "5",
         "isFavorite": false
     },
     {
-        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic6.jpg?raw=true",
+        "url": "https://raw.githubusercontent.com/sergiuSsg/Picosa-React/main/photos/pic6.jpg",
         "id": "6",
         "isFavorite": false
     },
     {
-        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic7.jpg?raw=true",
+        "url": "https://raw.githubusercontent.com/sergiuSsg/Picosa-React/main/photos/pic7.jpg",
         "id": "7",
         "isFavorite": false
     },
     {
-        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic8.jpg?raw=true",
+        "url": "https://raw.githubusercontent.com/sergiuSsg/Picosa-React/main/photos/pic8.jpg",
         "id": "8",
         "isFavorite": false
     },
     {
-        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic9.jpg?raw=true",
+        "url": "https://raw.githubusercontent.com/sergiuSsg/Picosa-React/main/photos/pic9.jpg",
         "id": "9",
         "isFavorite": false
     },
     {
-        "url": "https://github.com/bobziroll/scrimba-react-bootcamp-images/blob/master/pic10.jpg?raw=true",
+        "url": "https://raw.githubusercontent.com/sergiuSsg/Picosa-React/main/photos/pic10.jpg",
         "id": "10",
         "isFavorite": false
     },
