@@ -1,5 +1,3 @@
-Picosa-Website-React (Work in progress)
+Picosa Website - Work in progress
 
-
-
-Wallpaper Website Example made in React
+Sell Photos Online (Website made in React)
