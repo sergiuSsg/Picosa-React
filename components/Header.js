@@ -4,7 +4,7 @@ import {Context} from "../AppContext";
 
 function Header() {
     const {cartItems, allPhotos} = useContext(Context)
-    const classClassName = cartItems.length ? "ri-shopping-cart-fill" : "ri-shopping-cart-line"
+    const cartClassName = cartItems.length ? "ri-shopping-cart-fill" : "ri-shopping-cart-line"
     const starClassName = allPhotos.some(photo => photo.isFavorite === true) ? "ri-heart-fill" : "ri-heart-line"
     
     return (
@@ -14,7 +14,7 @@ function Header() {
             </Link>
             <div style={{ marginRight: "10%"}}>
             <Link to="/cart">            
-                <i className={`${classClassName} fillCart ri-fw ri-2x`}></i>
+                <i className={`${cartClassName} fillCart ri-fw ri-2x`}></i>
             </Link>
             <Link to="/favorites" style={{ marginLeft: "50px"}}>            
                 <i className={`${starClassName} ri-fw ri-2x`}></i>
