@@ -1,19 +1,25 @@
-import React, { useContext } from "react"
-import { Link } from "react-router-dom"
-
-import { AppContext } from "../AppContext"
+import React, {useContext} from "react"
+import {Link} from "react-router-dom"
+import {Context} from "../AppContext";
 
 function Header() {
-    const { cartItems } = useContext(AppContext)
-    const cartClassName = cartItems.length > 0 ? "ri-shopping-cart-fill" : "ri-shopping-cart-line"
+    const {cartItems, allPhotos} = useContext(Context)
+    const classClassName = cartItems.length ? "ri-shopping-cart-fill" : "ri-shopping-cart-line"
+    const starClassName = allPhotos.some(photo => photo.isFavorite === true) ? "ri-heart-fill" : "ri-heart-line"
+    
     return (
         <header>
-            <Link to="/">
+            <Link to="/" style={{ marginLeft: "10%" }}>
                 <h2>Picosa</h2>
             </Link>
-            <Link to="/cart">
-                <i className={`${cartClassName} fillCart ri-fw ri-2x`}></i>
+            <div style={{ marginRight: "10%"}}>
+            <Link to="/cart">            
+                <i className={`${classClassName} fillCart ri-fw ri-2x`}></i>
             </Link>
+            <Link to="/favorites" style={{ marginLeft: "50px"}}>            
+                <i className={`${starClassName} ri-fw ri-2x`}></i>
+            </Link>
+            </div>
         </header>
     )
 }
