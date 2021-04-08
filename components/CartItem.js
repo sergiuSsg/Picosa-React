@@ -1,24 +1,26 @@
-import React, { useState, useContext } from "react"
+import React, {useContext} from "react"
 import PropTypes from "prop-types"
-import { AppContext } from "../AppContext"
+import {Context} from "../AppContext"
 import useHover from "../hooks/useHover"
 
-
-function CartItem({ item }) {
-    const { removeFromCart } = useContext(AppContext)
-    //const [hovered, setHovered] = useState(false)
-    const [hovered, ref] = useHover()
+function CartItem({item}){
+    const {removeFromCart} = useContext(Context)
+    const imagePrice = 5.99
+    const [hovered, enter, leave] = useHover()
     const iconClassName = hovered ? "ri-delete-bin-fill" : "ri-delete-bin-line"
 
     return (
-        <div className="cart-item">
-            <i
-                className={iconClassName}
-                onClick={() => removeFromCart(item.id)}
-                ref={ref}
-            ></i>
-            <img src={item.url} width="130px" />
-            <p>$5.99</p>
+        <div className="cart-item"> 
+            <i 
+                onClick={() => removeFromCart(item.id)} 
+                className={iconClassName} 
+                onMouseEnter={() => enter()}
+                onMouseLeave={() => leave()}
+            >
+            </i>
+            <img src={item.url} width="130px" alt="Wallpaper" />
+            <p>Resolution: {item.resolution}</p>
+            <h4>{imagePrice}</h4>
         </div>
     )
 }
