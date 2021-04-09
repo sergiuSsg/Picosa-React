@@ -12,7 +12,6 @@ function useHover() {
     }
 
     return [hovered, enter, leave]
-
 }
 
 export default useHover
