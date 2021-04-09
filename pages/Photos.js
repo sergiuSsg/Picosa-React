@@ -4,7 +4,6 @@ import {Context} from "../AppContext"
 import {getClass} from "../utils/utilily"
 import ReactPaginate from "react-paginate"
 
-
 function Photos() {
     const {allPhotos} = useContext(Context)
     const [pageNumber, setPageNumber] = useState(0)
@@ -12,7 +11,7 @@ function Photos() {
     const photosCounter = pageNumber * photosPerPage
     const pageCount = Math.ceil(allPhotos.length / photosPerPage)
     
-    const mappedPhotos = allPhotos
+    const photoComponents = allPhotos
         .slice(photosCounter, photosCounter + photosPerPage)
         .map(photo => (
         <Image key={photo.id} img={photo} className={getClass(photo.id) } />
@@ -25,7 +24,7 @@ function Photos() {
     return (
         <div>
             <main className="photos">
-                {mappedPhotos}
+                {photoComponents}
             </main>
             <br/>
                 <ReactPaginate 
