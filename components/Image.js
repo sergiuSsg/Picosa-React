@@ -24,7 +24,6 @@ function Image({className, img}) {
         }
     }
 
-
     return(
         <div
             onMouseEnter={() => enter()}
