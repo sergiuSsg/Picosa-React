@@ -1,6 +1,6 @@
 import React from "react"
-import "./styles.css"
 import {useState, useEffect} from "react"
+import "./styles.css"
 
 const Context = React.createContext()
 
@@ -9,6 +9,16 @@ function ContextProvider({children}){
     const [allPhotos, setAllPhotos] = useState([])
     const [cartItems, setCartItems] = useState([])
 
+    function toggleFavorite(id){    
+        const tempArray = allPhotos.map(photo => {
+            if(photo.id === id) {
+              return {...photo, isFavorite: !photo.isFavorite}
+            }
+            return photo
+        })
+        setAllPhotos(tempArray)
+    }
+
     function addToCart(image){
         setCartItems(prevCart => [...prevCart, image])
     }
@@ -16,22 +26,10 @@ function ContextProvider({children}){
     function removeFromCart(id){
         setCartItems(prevCartItems => prevCartItems.filter(item => item.id !== id))
     }
-    
-    function toggleFavorite(id){    
-        const tempArray = allPhotos.map(photo => {
-            if(photo.id === id) {
-              return {...photo, isFavorite: !photo.isFavorite}
-            }
-
-            return photo
-        })
-        setAllPhotos(tempArray)
-    }
 
     function emptyCart(){
         setCartItems([])
     }
-
 
     useEffect(() => {
         fetch(url)
