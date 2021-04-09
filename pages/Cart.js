@@ -1,39 +1,45 @@
-import React, { useState, useContext } from "react"
-import { AppContext } from "../AppContext"
+import React, { useContext, useState } from "react"
+import {Context} from "../AppContext"
 import CartItem from "../components/CartItem"
 
-
 function Cart() {
+    const {cartItems, emptyCart} = useContext(Context)
     const [buttonText, setButtonText] = useState("Place Order")
-    const { cartItems, emptyCart } = useContext(AppContext)
-    const totalCost = 5.99 * cartItems.length
-    const totalCostDisplay = totalCost.toLocaleString("en-US", { style: "currency", currency: "USD" })
-    const itemsMapped = cartItems.map(item => (
-        <CartItem key={item.id} item={item} />)
-    )
+    const totalPrice = (cartItems.length * 5.99).toLocaleString("en-GB", {style: "currency", currency: "GBP"})
+    const cartElements = cartItems.map(item => <CartItem key={item.id} item={item}/>)
 
-    function placeOrder() {
+    function placeOrder(){
         setButtonText("Ordering...")
         setTimeout(() => {
-            console.log("Order placed!")
-            setButtonText("Place Order")
+            console.log("orderPlaced")
             emptyCart()
+            setButtonText("Place Order")
         }, 3000)
     }
 
-    console.log(itemsMapped)
+    function deleteOrder(){
+        emptyCart()
+    }
+
     return (
         <main className="cart-page">
-            <h1>Check out</h1>
-            {itemsMapped}
-            <p className="total-cost">Total: {totalCostDisplay}</p>
+            <h2>Check out</h2>
+            {cartElements}
             {
                 cartItems.length > 0 ?
-                    <div className="order-button">
-                        <button onClick={placeOrder}>{buttonText}</button>
-                    </div> :
-                    <p>You have no items in the cart!</p>
-            }
+                <div>
+                    <p className="total-cost">Total: {totalPrice}</p>
+                    <div className="cart-buttons">
+                        <div onClick={() => deleteOrder()} className="clear-cart-button">
+                            <button>Clear Cart</button>
+                        </div>
+                        <div onClick={() => placeOrder()} className="order-button">
+                            <button>{buttonText}</button>
+                        </div>
+                    </div>
+                </div> :
+                <p>You have no items in your cart.</p>
+            } 
         </main>
     )
 }
