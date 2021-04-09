@@ -12,7 +12,6 @@ function Favorites() {
         }))
     }, [allPhotos])
 
-
     function clearFavorites () {
         setAllPhotos(prevPhotos => {
            return prevPhotos.map(photo => photo.isFavorite === true ? {...photo, isFavorite: false} : photo)
@@ -37,5 +36,3 @@ function Favorites() {
 }
 
 export default Favorites
-
-
