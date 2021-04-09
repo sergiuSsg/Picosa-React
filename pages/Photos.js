@@ -1,21 +1,45 @@
-// home page
-
-import React, { useContext } from "react"
+import React, {useContext, useState} from "react"
 import Image from "../components/Image"
-import { getClass } from "../utils"
-import { AppContext } from "../AppContext"
+import {Context} from "../AppContext"
+import {getClass} from "../utils/utilily"
+import ReactPaginate from "react-paginate"
+
 
 function Photos() {
-    const { allPhotos } = useContext(AppContext)
-    const photosMapped = allPhotos.map((photo, index) => (
-        <Image key={photo.id} img={photo} className={getClass(index)} />
+    const {allPhotos} = useContext(Context)
+    const [pageNumber, setPageNumber] = useState(0)
+    const photosPerPage = 42
+    const photosCounter = pageNumber * photosPerPage
+    const pageCount = Math.ceil(allPhotos.length / photosPerPage)
+    
+    const mappedPhotos = allPhotos
+        .slice(photosCounter, photosCounter + photosPerPage)
+        .map(photo => (
+        <Image key={photo.id} img={photo} className={getClass(photo.id) } />
     ))
+    
+    const changePage = ({selected}) => {
+        setPageNumber(selected)
+    }
 
     return (
-        <main className="photos">
-            <h1>Images</h1>
-            {photosMapped}
-        </main>
+        <div>
+            <main className="photos">
+                {mappedPhotos}
+            </main>
+            <br/>
+                <ReactPaginate 
+                    previousLabel={"Previous"}
+                    nextLabel={"Next"}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
+                    containerClassName={"paginationBttns"}
+                    previousLinkClassName={"previousBttn"}
+                    nextLinkClassName={"nextBttn"}
+                    disabledClassName={"paginationDisabled"}
+                    activeClassName={"paginationActive"}
+                />
+        </div>
     )
 }
 
