@@ -1,3 +1,3 @@
 Picosa Website
 
-Sell Photos Online (Website made in React)
+Sell Photos Online (Made in React)
